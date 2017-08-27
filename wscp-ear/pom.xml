@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>wscp</artifactId>
+        <groupId>com.wscp</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>wscp-ear</artifactId>
+    <name>wscp-ear</name>
+    <dependencies>
+        <dependency>
+            <groupId>com.wscp</groupId>
+            <artifactId>wscp-web</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <type>war</type>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-ear-plugin</artifactId>
+                <version>2.10</version>
+                <configuration>
+                    <version>${java-version}</version>
+                    <earName>${project.parent.artifactId}-${project.version}</earName>
+                    <outputDirectory>target</outputDirectory>
+                    <modules>
+                        <webModule>
+                            <groupId>prot</groupId>
+                            <artifactId>${project.parent.artifactId}-web</artifactId>
+                            <contextRoot>/</contextRoot>
+                            <bundleFileName>${project.parent.artifactId}.war</bundleFileName>
+                        </webModule>
+                    </modules>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
