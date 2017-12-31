@@ -52,7 +52,7 @@ public class UserDomain {
 
     @Override
     public String toString() {
-        return "Id =" + Id + "," +
+        return "用户Id =" + Id + "," +
                 "userName =" + userName + "," +
                 "passWord =" + passWord + "," +
                 "role =" + role + "," +
