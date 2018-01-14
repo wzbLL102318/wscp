@@ -6,7 +6,7 @@
 <mapper namespace="com.git.wscp.mapper.UserMapper">
     <select id="findUserByID" resultType="com.git.wscp.domain.UserDomain" parameterType="java.lang.String">
         SELECT *
-        FROM CREDITUSER
+        FROM T_CREDIT_USER
         WHERE ID = #{ID}
     </select>
 </mapper>
