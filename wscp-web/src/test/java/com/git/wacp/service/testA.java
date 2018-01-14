@@ -16,7 +16,6 @@ public class testA {
         if(countA.equals(countB)){
             System.out.print("This is False");
         }
-
         final Lock lock = new ReentrantLock();
         final Condition full = lock.newCondition();
 
