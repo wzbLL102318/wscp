@@ -4,7 +4,7 @@
 
 <!-- 设置为Dao接口方法提供sql语句配置 -->
 <mapper namespace="com.git.wscp.mapper.UserMapper">
-    <select id="findUserByID" resultType="UserDomain" parameterType="java.util.String">
+    <select id="findUserByID" resultType="com.git.wscp.domain.UserDomain" parameterType="java.lang.String">
         SELECT *
         FROM CREDITUSER
         WHERE ID = #{ID}
