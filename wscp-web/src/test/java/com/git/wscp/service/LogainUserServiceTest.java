@@ -20,6 +20,7 @@ public class LogainUserServiceTest extends BaseTest {
         }else{
             logger.info("===================This is True");
         }
+        logger.info("TTTTTTTTTTTTTTTTTTTTTTTTTTT");
     }
     public static String getType(Object o){ //获取变量类型方法
         return o.getClass().toString(); //使用int类型的getClass()方法
