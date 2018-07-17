@@ -13,7 +13,7 @@ import java.sql.SQLException;
  * Version: 1.0
  * Description: jdbc 工具类
  */
-public class JdbcConnection {
+public abstract class JdbcConnection {
 
     // 创建一个本地线程，防止死锁
     private static final ThreadLocal<Connection> THREAD_LOCAL = new ThreadLocal<>();
